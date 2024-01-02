@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Фильмотека</title>
+    <link rel="icon" type="png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+            <div class="container">
+                <div class="header__top">
+                <div class="logo">
+                    <a href="#">
+                    <img src="LogoFilm.png" alt="" class="LogoPhoto">
+                    </a>
+                </div>
+      
+                <nav class="menu">
+                    <div class="menu__btn">
+                    <span></span>
+                    </div>
+                    <ul class="menu__list">
+    
+                        <li>
+                            <div class="btn">
+                                <a class="text" href="Mediateka.html">Фильмотека</a>
+                            </div>
+                            
+                        </li>
+    
+                    <li>
+                        <div class="btn">
+                            <a class="text" href="index.html">Онлайн-каталог</a>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="btn">
+                            <a class="text" href="createFilm.html">Добавить фильм</a>
+                        </div>
+                    </li>
+    
+                    </ul>
+                </nav>
+                </div>
+            </div>
+    </header>
+    <br>
+    <div id="filter">
+
+        <div class="buttonWrap"> <p class="text color-text">Фильтр</p></div>
+        <div class="split"></div>
+       
+
+        <label class="label-text-filter">
+            <p class="lab">Страна</p>
+            <select id="country-filter" class="value-filter" onchange="">
+            </select>
+        </label>
+        <div class="split"></div>
+
+
+        <label class="label-text-filter">
+            <p class="lab">Жанр</p>
+            <select id="genre-filter" class="value-filter">
+            </select>
+        </label>
+        <div class="split"></div>
+
+        <label class="label-text-filter">
+            <p class="lab lab-2">Дата выхода (с)</p>
+            <input type="date" id="yearFrom-filter" class="value-filter">
+            </select>
+        </label>
+        <div class="split"></div>
+
+
+        <label class="label-text-filter">
+            <p class="lab lab-2">Дата выхода (по)</p>
+            <input type="date" id="yearTo-filter" class="value-filter">
+            </select>
+        </label>
+        <div class="split"></div>
+
+        <div class="split"></div>
+
+        <div class="buttonWrap"> 
+
+            <div class="btn">
+                <button class="filter__btn buttons" onclick="offlineCatalog.renderCatalogByFilter()">Найти</button>
+            </div>    
+
+        </div>
+        <div class="split"></div>
+        
+    </div>
+
+
+    <div class="wrappper"><div id="catalog"></div></div>
+    <div id="comment"></div>
+    <div id="newcomment"></div>
+    <div id="add-film"></div>
+
+    
+    <!--Filter-->
+    <script src="filter.js"></script>
+    <link rel="stylesheet" href="filter.css">
+
+    <!--Catalog-->
+    <script src="offlineCatalog.js"></script>
+    <link rel="stylesheet" href="catalog.css">
+
+    <!--Comment-->
+    <script src="comment.js"></script>
+    <link rel="stylesheet" href="comment.css">
+</body>
+</html>

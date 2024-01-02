@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Фильмотека</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+            <div class="logo">
+                <a href="#">
+                <img src="LogoFilm.png" alt="" class="LogoPhoto">
+                </a>
+            </div>
+  
+            <nav class="menu">
+                <div class="menu__btn">
+                <span></span>
+                </div>
+                <ul class="menu__list">
+
+                    <li>
+                        <div class="btn">
+                            <a class="text" href="Mediateka.html">Фильмотека</a>
+                        </div>
+                        
+                    </li>
+
+                <li>
+                    <div class="btn">
+                        <a class="text" href="index.html">Онлайн-каталог</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="btn">
+                        <a class="text" href="createFilm.html">Добавить фильм</a>
+                    </div>
+                </li>
+
+                </ul>
+            </nav>
+
+            
+            </div>
+        </div>
+    </header>
+<br>
+    <div class="newFilm-container">
+        <form id="newFilm">
+
+            <label class="newFilm-label">
+                <p class="lab">Название:</p> <input type="text" id="name" placeholder="Шрек 3" required>
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Страна:</p> <select id="country-filter" class="value-filter"></select>
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Жанр:</p><select id="genre-filter" class="value-filter"></select>
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Режиссёры:</p>
+                <input type="text" id="director1" class="value-filter" placeholder="Режиссёр 1">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab"></p>
+                <input type="text" id="director2" class="value-filter" placeholder="Режиссёр 2">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab"></p>
+                <input type="text" id="director3" class="value-filter" placeholder="Режиссёр 3">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Сценарист:</p>
+                <input type="text" id="screenwriter" class="value-filter" placeholder="Иванов Иван Иванович">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Продюсер:</p>
+                <input type="text" id="producer" class="value-filter" placeholder="Иванов Иван Иванович">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Оператор:</p>
+                <input type="text" id="operator" class="value-filter" placeholder="Иванов Иван Иванович">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Композитор:</p>
+                <input type="text" id="composer" class="value-filter" placeholder="Иванов Иван Иванович">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Бюджет фильма:</p>
+                <input type="number" id="budget" class="value-filter" placeholder="1000000" min="0">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Мировые сборы:</p>
+                <input type="number" id="worldFees" class="value-filter" placeholder="1000000" min="0">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Возрастной рейтинг:</p>
+                <input type="text" id="ageRate" class="value-filter" placeholder="18+">
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Длительность фильма:</p>
+                <input type="time" id="filmLength" class="value-filter" required>
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Дата выхода:</p>
+                <input type="date" id="releaseDate" class="value-filter" required>
+            </label>
+            <div class="split"></div>
+
+            <label class="newFilm-label">
+                <p class="lab">Url постера:</p>
+                <input type="text" id="posterUrl" class="value-filter">
+            </label>
+            <div class="split"></div>
+
+            <div class="buttonWrap">
+
+                <div class="btn">
+                    <button class="buttons" type="submit" onclick="createFilm.addToFilmList()">Создать</button>
+                </div>     
+            </div>
+        </form>
+    </div>
+
+<!--NewFilm-->
+<script src="filter.js"></script>
+<!--NewFilm-->
+<script src="createFilm.js"></script>
+<link rel="stylesheet" href="createFilm.css">
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+.newFilm-container {
+    display: flex;
+    padding: 25px 50px;
+    border-radius: 30px;
+    background-color: #414141;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    margin: auto;
+    max-width: 600px;
+    justify-content: center;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
